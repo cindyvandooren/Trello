@@ -1,6 +1,6 @@
 class Api::BoardsController < ApplicationController
   before_action :require_signed_in!
-  
+
   def index
     @boards = Board.all
   end
@@ -14,7 +14,7 @@ class Api::BoardsController < ApplicationController
     if @board.save
       render :show
     else
-      render json: @pokemon.errors.full_messages, status: :unprocessable_entity
+      render json: @board.errors.full_messages, status: :unprocessable_entity
     end
   end
 
