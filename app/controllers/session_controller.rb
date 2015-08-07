@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if user
       sign_in(user)
-      redirect_to boards_url
+      redirect_to api_boards_url
     else
       flash.now[:errors] = ["Invalid username or password"]
       render :new
