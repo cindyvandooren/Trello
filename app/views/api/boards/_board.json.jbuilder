@@ -1,4 +1,4 @@
-json.extract!(board, :title)
+json.extract!(board, :title, :id)
 
 if show_lists
   json.lists do

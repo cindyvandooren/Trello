@@ -1,8 +1,6 @@
-Trello.Views.BoardItem = Backbone.View.extend({
-  template: JST["boards/board_item"],
+Trello.Views.BoardShow = Backbone.View.extend({
+  template: JST["boards/show"],
 
-  tagName: "li",
-  
   render: function () {
     var renderedContent = this.template({board: this.model});
     this.$el.html(renderedContent);
