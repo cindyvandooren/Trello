@@ -2,7 +2,7 @@ class Api::BoardsController < ApplicationController
   before_action :require_signed_in!
 
   def index
-    @boards = Board.all
+    @boards = @current_user.boards
   end
 
   def show

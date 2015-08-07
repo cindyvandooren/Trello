@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150807202942) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "boards", force: :cascade do |t|
     t.string   "title",      null: false
     t.integer  "user_id",    null: false
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150807202942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
+  add_index "boards", ["user_id"], name: "index_boards_on_user_id", using: :btree
 
   create_table "lists", force: :cascade do |t|
     t.string   "title",      null: false
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150807202942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "lists", ["board_id"], name: "index_lists_on_board_id"
+  add_index "lists", ["board_id"], name: "index_lists_on_board_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
@@ -41,6 +44,6 @@ ActiveRecord::Schema.define(version: 20150807202942) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "users", ["password_digest"], name: "index_users_on_password_digest"
+  add_index "users", ["password_digest"], name: "index_users_on_password_digest", using: :btree
 
 end

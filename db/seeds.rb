@@ -16,3 +16,28 @@ Board.create!({title: "Funny Board", user_id: 1})
 Board.create!({title: "Lame Board", user_id: 1})
 Board.create!({title: "Happy Board", user_id: 1})
 Board.create!({title: "Sad Board", user_id: 1})
+
+List.create!({title: "List 1", ord: 1, board_id: 1})
+List.create!({title: "List 2", ord: 2, board_id: 1})
+List.create!({title: "List 3", ord: 3, board_id: 1})
+List.create!({title: "List 4", ord: 4, board_id: 1})
+
+List.create!({title: "List 1", ord: 1, board_id: 2})
+List.create!({title: "List 2", ord: 2, board_id: 2})
+List.create!({title: "List 3", ord: 3, board_id: 2})
+List.create!({title: "List 4", ord: 4, board_id: 2})
+
+List.create!({title: "List 1", ord: 1, board_id: 3})
+List.create!({title: "List 2", ord: 2, board_id: 3})
+List.create!({title: "List 3", ord: 3, board_id: 3})
+List.create!({title: "List 4", ord: 4, board_id: 3})
+
+List.create!({title: "List 1", ord: 1, board_id: 4})
+List.create!({title: "List 2", ord: 2, board_id: 4})
+List.create!({title: "List 3", ord: 3, board_id: 4})
+List.create!({title: "List 4", ord: 4, board_id: 4})
+
+List.create!({title: "List 1", ord: 1, board_id: 5})
+List.create!({title: "List 2", ord: 2, board_id: 5})
+List.create!({title: "List 3", ord: 3, board_id: 5})
+List.create!({title: "List 4", ord: 4, board_id: 5})
