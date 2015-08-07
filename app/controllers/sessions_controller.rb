@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_credentials(
-    params[:user][:username],
+    params[:user][:email],
     params[:user][:password]
     )
 
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       sign_in(user)
       redirect_to api_boards_url
     else
-      flash.now[:errors] = ["Invalid username or password"]
+      flash.now[:errors] = ["Invalid email or password"]
       render :new
     end
   end
