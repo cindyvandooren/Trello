@@ -6,6 +6,8 @@ class Api::BoardsController < ApplicationController
   end
 
   def show
+    # To avoid n +1 queries later on, when we add cards: use includes(:lists).
+    # Also make sure the lists point to the cards.
     @board = Board.find(params[:id])
   end
 
