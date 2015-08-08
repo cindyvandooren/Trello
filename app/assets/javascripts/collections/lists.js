@@ -1,3 +1,5 @@
 Trello.Collections.Lists = Backbone.Collection.extend({
-  url: ""
+  url: "api/lists",
+
+  model: Trello.Models.List
 });

@@ -22,6 +22,12 @@ Trello.Routers.Router = Backbone.Router.extend({
     this._swapView(showView);
   },
 
+  new: function () {
+    var board = new Trello.Models.Board();
+    var newView = new Trello.Views.BoardForm({model: board, collection: this.collection});
+    this._swapView(newView);
+  },
+
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;

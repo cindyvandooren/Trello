@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
 
-  namespace :api do
-    resources :boards, only: [:index, :show, :create], defaults: {format: :json} do
-      resources :lists, only: [:create], defaults: { format: :json }
+  namespace :api, defaults: {format: :json} do
+    resources :boards, only: [:index, :show, :create]  do
+      # resources :lists, only: [:create], defaults: { format: :json }
     end
-      resources :lists, only: [:show]
+    resources :lists, only: [:create, :show]
   end
 end
+
+# post "api/boards/:board_id/lists"
