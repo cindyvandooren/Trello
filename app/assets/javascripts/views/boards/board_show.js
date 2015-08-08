@@ -1,4 +1,4 @@
-Trello.Views.BoardShow = Backbone.View.extend({
+Trello.Views.BoardShow = Backbone.CompositeView.extend({
   template: JST["boards/show"],
 
   render: function () {
